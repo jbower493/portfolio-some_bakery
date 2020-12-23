@@ -1,6 +1,66 @@
 ---
-title: Home Page
 layout: layout.liquid
+title: Home Page
+description: A page of home
 ---
 
-<h1>This is the liquid content</h1>
+<section class="hero-section">
+  <div class="overlay hero-overlay">
+    <div class="hero-content">
+      <h2 class="hero-header">Freshly baked and delicious</h2>
+      <p class="hero-text">Baked goods you won't forget in a hurry</p>
+    </div>
+  </div>
+</section>
+
+<section class="image-nav-section">
+  <div class="grid-container">
+
+    <a href="/products" class="grid-item grid-products">
+      <div class="grid-overlay"></div>
+      <div class="grid-corner"></div>
+      <h3>Products</h3>
+    </a>
+
+    <a href="/stores" class="grid-item grid-stores">
+      <div class="grid-overlay"></div>
+      <div class="grid-corner"></div>
+      <h3>Stores</h3>
+    </a>
+
+    <a href="/blog" class="grid-item grid-blog">
+      <div class="grid-overlay"></div>
+      <div class="grid-corner"></div>
+      <h3>Blog</h3>
+    </a>
+
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="overlay quote-overlay">
+    <p class="quote-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam."</p>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="about-content">
+    <div class="about-text">
+      <h3>Our Story</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <img class="about-image" src="/images/dough.jpg" alt="">
+  </div>
+</section>
+
+<section id="gallery" class="gallery-section bg-primary">
+  <h4>Some snaps from our instagram</h4>
+  <div class="image-container">
+    <img src="/images/kneading.jpg" alt="">
+    <img src="/images/wheat.jpg" alt="">
+    <img src="/images/macaroons.jpg" alt="">
+    <img src="/images/chocolate_croissants.jpg" alt="">
+    <img src="/images/swirls.jpg" alt="">
+  </div>
+  <a href="" class="btn">View on Instagram</a>
+</section>

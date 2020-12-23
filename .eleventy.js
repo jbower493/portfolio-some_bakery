@@ -5,7 +5,9 @@ module.exports = (config) => {
     strict_filters: true
   });
 
-  config.addPassthroughCopy("src/main.js");
+  config.addPassthroughCopy("src/js/main.js");
+  config.addPassthroughCopy("src/css/style.css");
+  config.addPassthroughCopy("src/images");
 
   return {
     dir: {

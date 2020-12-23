@@ -1,0 +1,63 @@
+---
+layout: layout.liquid
+title: Products Page
+description: A page to display the products
+---
+
+<section class="hero-section products-hero-section">
+  <div class="overlay hero-overlay">
+    <div class="hero-content">
+      <h2 class="hero-header products-hero-header">Our Products</h2>
+    </div>
+  </div>
+</section>
+
+<section class="products-section">
+
+  <div class="sidebar">
+    <div class="sidebar-content">
+
+      <input id="search" type="text" placeholder="Search Products">
+
+      <nav class="side-nav">
+        <ul>
+          <li><a href="#bread-category" id="bread-link" class="sidebar-link active">Bread</a></li>
+          <li><a href="#savoury-category" id="savoury-link" class="sidebar-link">Savoury</a></li>
+          <li><a href="#sweets-category" id="sweets-link" class="sidebar-link">Cakes & Sweets</a></li>
+          <li><a href="#pastries-category" id="pastries-link" class="sidebar-link">Pastries</a></li>
+          <li><a href="#seasonal-category" id="seasonal-link" class="sidebar-link">Seasonal</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <main>
+
+    {% for category in products.categories %}
+      
+      <div id="{{ category.id }}-category" class="category">
+
+        <h3 class="category-title">{{ category.name }}</h3>
+
+        <div class="products-container">
+
+          {% for item in category.items %}
+
+            <div id="{{ item.name | downcase }}" class="product">
+              <img src="{{ item.img_src }}" alt="">
+              <h4>{{ item.name }}</h4>
+              <p>{{ item.description }}</p>
+            </div>
+
+          {% endfor %}
+
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </main>
+
+</section>
